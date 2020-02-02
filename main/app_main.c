@@ -14,8 +14,7 @@
 #include "soc/uhci_periph.h"
 #include "driver/periph_ctrl.h"
 
-#define NVS_TAG "nvs"
-#define BT_TAG  "bt"
+#define TAG "uart_hci"
 
 int app_main(void)
 {
@@ -26,18 +25,16 @@ int app_main(void)
     }
     ESP_ERROR_CHECK(ret);
 
-    ESP_LOGI(NVS_TAG, "initialized.");
-
     periph_module_enable(PERIPH_UART1_MODULE);
     periph_module_enable(PERIPH_UHCI0_MODULE);
 
-    uart_set_pin(UART_NUM_1, 5, 18, 19, 23);
+    ESP_ERROR_CHECK(uart_set_pin(UART_NUM_1, 5, 18, 19, 23));
 
     esp_bt_controller_config_t bt_cfg = BT_CONTROLLER_INIT_CONFIG_DEFAULT();
     ESP_ERROR_CHECK(esp_bt_controller_init(&bt_cfg));
     ESP_ERROR_CHECK(esp_bt_controller_enable(ESP_BT_MODE_BTDM));
 
-    ESP_LOGI(BT_TAG, "initialized, tx: 5, rx: 18, cts: 23, rts: 19");
+    ESP_LOGI(TAG, "initialized, tx: 5, rx: 18, cts: 23, rts: 19");
 
     return 0;
 }

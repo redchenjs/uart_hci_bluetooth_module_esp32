@@ -1,13 +1,14 @@
-Bluetooth HCI UART Controller
-=============================
+UART HCI Bluetooth Module
+=========================
 
-BTDM controller inside the ESP32 chip, use UART(H4) as HCI IO.
+There is a Bluetooth 4.2 dual-mode controller inside the ESP32 chip, which can use UART(H4) as HCI IO.
 
 ## Pinmap
 
-| UART | TX | RX | CTS | RTS |
-| :--: | -: | -: | --: | --: |
-|  Pin |  5 | 18 |  19 |  23 |
+| HOST  | RX | TX | RTS | CTS |
+| :---- | -: | -: | --: | --: |
+| ESP32 | TX | RX | CTS | RTS |
+| Pin   |  5 | 18 |  19 |  23 |
 
 * HCI UART protocol: `H4`
 * HCI UART baudrate: `921600 bps`
@@ -17,7 +18,7 @@ BTDM controller inside the ESP32 chip, use UART(H4) as HCI IO.
 ### Obtain the Source
 
 ```
-git clone --recursive https://github.com/redchenjs/bluetooth_hci_uart_controller_esp32.git
+git clone --recursive https://github.com/redchenjs/uart_hci_bluetooth_module_esp32.git
 ```
 
 ### Update an existing repository
