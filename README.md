@@ -15,7 +15,7 @@ There is a Bluetooth 4.2 dual-mode controller inside the ESP32 chip, which can u
 
 ## Preparing
 
-### Obtain the Source
+### Obtain the source
 
 ```
 git clone --recursive https://github.com/redchenjs/uart_hci_bluetooth_module_esp32.git
@@ -28,7 +28,7 @@ git pull
 git submodule update --init --recursive
 ```
 
-### Setup the Tools
+### Setup the tools
 
 ```
 ./esp-idf/install.sh
