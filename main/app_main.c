@@ -34,7 +34,7 @@ int app_main(void)
     ESP_ERROR_CHECK(esp_bt_controller_init(&bt_cfg));
     ESP_ERROR_CHECK(esp_bt_controller_enable(ESP_BT_MODE_BTDM));
 
-    ESP_LOGI(TAG, "initialized, tx: 5, rx: 18, cts: 23, rts: 19");
+    ESP_LOGI(TAG, "initialized, tx: 5, rx: 18, rts: 19, cts: 23");
 
     return 0;
 }

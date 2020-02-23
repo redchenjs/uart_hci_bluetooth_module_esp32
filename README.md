@@ -5,9 +5,9 @@ There is a Bluetooth 4.2 dual-mode controller inside the ESP32 chip, which can u
 
 ## Pinmap
 
-| HOST  | RX | TX | RTS | CTS |
+| HOST  | RX | TX | CTS | RTS |
 | :---- | -: | -: | --: | --: |
-| ESP32 | TX | RX | CTS | RTS |
+| ESP32 | TX | RX | RTS | CTS |
 | Pin   |  5 | 18 |  19 |  23 |
 
 * HCI UART protocol: `H4`
